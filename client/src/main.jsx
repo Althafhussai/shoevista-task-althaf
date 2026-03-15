@@ -18,25 +18,26 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Login from "./pages/Login.jsx";
 import SignUp from "./pages/SignUp.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
     children: [
-      { path: '/', element: <Home /> },
-      { path: '/login', element: <Login /> },
-      { path: '/signup', element: <SignUp /> },
-      { path: '/about-us', element: <About /> },
-      { path: '/cart', element: <Cart /> },
-      { path: '/wishlist', element: <WishList /> },
-      { path: '/shoes/men', element: <Men /> },
-      { path: '/shoes/women', element: <Women /> },
-      { path: '/shoes/kids', element: <Kids /> },
-      { path: '/product-details/:id', element: <ProductDetails /> },
-      { path: '/search/:search', element: <SearchResults /> },
-
-    ]
+      { path: "/", element: <Home /> },
+      { path: "/about-us", element: <AboutUs /> },
+      { path: "/login", element: <Login /> },
+      { path: "/signup", element: <SignUp /> },
+      { path: "/about-us", element: <About /> },
+      { path: "/cart", element: <Cart /> },
+      { path: "/wishlist", element: <WishList /> },
+      { path: "/shoes/men", element: <Men /> },
+      { path: "/shoes/women", element: <Women /> },
+      { path: "/shoes/kids", element: <Kids /> },
+      { path: "/product-details/:id", element: <ProductDetails /> },
+      { path: "/search/:search", element: <SearchResults /> },
+    ],
   },
 ]);
 
@@ -50,5 +51,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <ToastContainer />
       </CartProvider>
     </WishListProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
